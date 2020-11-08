@@ -1,15 +1,10 @@
-function makeWorker() {
-    let name = "Pete";
-  
-    return function() {
-      alert(name);
-    };
+function storm(){
+   let a=10;
+  return function(){
+    a += 1
+    return a;
   }
-  
-  let name = "John";
-  
-  // create a function
-  let work = makeWorker();
-  
-  // call it
-  work();
+}
+let b = storm();
+console.log(b());
+console.log(b());
