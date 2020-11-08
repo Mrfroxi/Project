@@ -1,10 +1,16 @@
-function storm(){
-   let a=10;
-  return function(){
-    a += 1
-    return a;
-  }
+function makeCounter() {
+  let count = 0;
+
+  return function() {
+    return count++;
+  };
 }
-let b = storm();
-console.log(b());
-console.log(b());
+
+let b = makeCounter();
+let counter2 = makeCounter();
+
+console.log( b() ); // 0
+console.log( b() ); // 1
+console.log(counter2() );
+console.log(counter2() ) ;
+
