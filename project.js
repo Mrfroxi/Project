@@ -1,11 +1,15 @@
-function sumTo(n){
-    let sum = 0;
-    for (let i = 1; i <= n; i++) {
-        sum += i;
-
-
-
-    }
-    return sum;
-}
-alert(sumTo(5));
+function makeWorker() {
+    let name = "Pete";
+  
+    return function() {
+      alert(name);
+    };
+  }
+  
+  let name = "John";
+  
+  // create a function
+  let work = makeWorker();
+  
+  // call it
+  work();
