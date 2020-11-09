@@ -1,16 +1,14 @@
-function makeCounter() {
-  let count = 0;
-
-  return function() {
-    return count++;
-  };
-}
-
-let b = makeCounter();
-let counter2 = makeCounter();
-
-console.log( b() ); // 0
-console.log( b() ); // 1
-console.log(counter2() );
-console.log(counter2() ) ;
-
+function printNumbers(from, to) {
+    let current = from;
+  
+    let timerId = setInterval(function() {
+      alert(current);
+      if (current == to) {
+        clearInterval(timerId);
+      }
+      current++;
+    }, 1000);
+  }
+  
+  // использование:
+  printNumbers(5, 10);
