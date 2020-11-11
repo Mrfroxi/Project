@@ -12,3 +12,4 @@ function printNumbers(from, to) {
   
   // использование:
   printNumbers(5, 10);
+  gg
